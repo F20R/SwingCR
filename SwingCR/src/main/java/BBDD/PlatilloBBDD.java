@@ -72,5 +72,14 @@ public class PlatilloBBDD {
         return platillos;
     }
 
+    public static void crearActualizarProducto(Platillo platillo){
 
+        Platillo platilloBD = obtenerPorId(platillo.getId());
+
+        if(platilloBD != null){
+            actualizarPlatillo(platillo);
+        }else{
+            crearPlatillo(platillo);
+        }
+    }
 }
